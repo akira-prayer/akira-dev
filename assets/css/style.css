@@ -215,8 +215,8 @@ body {
 }
 
 .sns-icon {
-  width: 38px;   /* ← 表示サイズを統一 */
-  height: 38px;
+  width: 19px;   /* ← 表示サイズを統一 */
+  height: 19px;
   vertical-align: middle; /* ← 高さズレ防止 */
   display: inline-block;
 }
