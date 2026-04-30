@@ -15,11 +15,11 @@ body {
   background: none;
   border: none;
   padding: 12px 0;
-  font-size: 0.95rem; /* ← Safari/Chrome 統一 */
+  font-size: 0.95rem;
   cursor: pointer;
   position: relative;
-  color: #000; /* Safari の青色を上書き */
-  font-weight: 500; /* 落ち着いた太さに統一 */
+  color: #000;
+  font-weight: 500;
 }
 
 /* 三角アイコン（閉じている時） */
@@ -46,6 +46,7 @@ body {
 .sub-accordion-content {
   display: none;
   padding: 0 0 12px 0;
+  overflow: visible; /* ← ★ SNSアイコンが切れないように追加 */
 }
 
 .accordion-item.active > .accordion-content {
@@ -57,27 +58,26 @@ body {
 }
 
 /* -----------------------------------
-   階層の左ライン（視覚的な階層表現）
+   階層の左ライン
 ----------------------------------- */
 
 .sub-accordion-content section {
   margin-left: 4px;
   padding-left: 8px;
-  border-left: 3px solid #ccc;  /* ← 太さ・色を統一 */
+  border-left: 3px solid #ccc;
 }
 
 .sub-accordion-item {
-  border-left: 3px solid #ccc;  /* ← 統一 */
+  border-left: 3px solid #ccc;
   margin-left: 4px;
   padding-left: 8px;
-
   border-bottom: 1px solid #ccc;
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
 
 .sub-accordion-item .sub-accordion-item {
-  border-left: 3px solid #ccc;  /* ← 同じ色に統一 */
+  border-left: 3px solid #ccc;
   margin-left: 4px;
   padding-left: 8px;
 }
@@ -156,7 +156,7 @@ body {
   margin: 24px 0;
 }
 
-/* quantum-table（既存） */
+/* quantum-table */
 .quantum-table {
   width: 100%;
   max-width: 600px;
@@ -209,7 +209,12 @@ body {
   line-height: 1.2;
 }
 
+/* -----------------------------------
+   ★ SNSアイコン（修正版）
+----------------------------------- */
+
 .sns-icons {
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -243,17 +248,17 @@ body {
 }
 
 /* -----------------------------------
-   外部HTMLの h3 を Safari/Chrome で統一
+   外部HTMLの h3
 ----------------------------------- */
 
 .sub-accordion-content h3 {
-  font-size: 1rem; /* ← Safari の大きさを抑える */
+  font-size: 1rem;
   margin: 12px 0 6px;
   font-weight: 600;
 }
 
 /* -----------------------------------
-   ★ 通常 table の自然な罫線
+   通常 table の自然な罫線
 ----------------------------------- */
 
 .sub-accordion-content table {
