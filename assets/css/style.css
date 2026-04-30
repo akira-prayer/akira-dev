@@ -209,6 +209,20 @@ body {
   line-height: 1.2;
 }
 
+.sns-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.sns-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* -----------------------------------
    外部HTMLの見出しに番号を付けない
 ----------------------------------- */
