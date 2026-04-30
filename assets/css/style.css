@@ -61,7 +61,7 @@ body {
 ----------------------------------- */
 
 .sub-accordion-content section {
-  margin-left: 12px;
+  margin-left: 20px;
   padding-left: 8px;
   border-left: 3px solid #ccc;  /* ← 太さ・色を統一 */
 }
