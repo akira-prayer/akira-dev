@@ -61,24 +61,23 @@ body {
 ----------------------------------- */
 
 .sub-accordion-content section {
-  margin-left: 12px;   /* ← ここでインデントを作る */
-  padding-left: 4px;   /* ← 必要なら少し余白 */
-  border-left: 2px solid #eee; /* ← 線を付けたいなら */
+  margin-left: 12px;
+  padding-left: 8px;
+  border-left: 3px solid #ccc;  /* ← 太さ・色を統一 */
 }
 
 .sub-accordion-item {
-  border-left: 3px solid #ddd;
-  margin-left: 4px;   /* ← 12px → 4px に変更 */
-  padding-left: 8px;  /* ← 12px → 8px に変更 */
+  border-left: 3px solid #ccc;  /* ← 統一 */
+  margin-left: 4px;
+  padding-left: 8px;
 
   border-bottom: 1px solid #ccc;
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
 
-/* 第3階層以降も自然に深く見える */
 .sub-accordion-item .sub-accordion-item {
-  border-left: 3px solid #ccc;
+  border-left: 3px solid #ccc;  /* ← 同じ色に統一 */
   margin-left: 4px;
   padding-left: 8px;
 }
