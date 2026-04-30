@@ -62,8 +62,8 @@ body {
 
 .sub-accordion-item {
   border-left: 3px solid #ddd;
-  margin-left: 12px;
-  padding-left: 12px;
+  margin-left: 4px;   /* ← 12px → 4px に変更 */
+  padding-left: 8px;  /* ← 12px → 8px に変更 */
 
   border-bottom: 1px solid #ccc;
   padding-bottom: 8px;
