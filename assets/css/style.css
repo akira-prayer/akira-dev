@@ -199,30 +199,26 @@ body {
   line-height: 1.2;
 }
 
-/* -----------------------------------
-   ★ SNSアイコン（完全修正版）
------------------------------------ */
-
+/* SNSアイコンの横並び（完全揃え） */
 .sns-icons {
-  width: 100%;
-  padding: 0 12px; /* ← 左右余白を追加（欠け防止） */
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin: 16px 0;
+  margin-left: 1em; /* ← テキストと左位置を揃える */
+  margin-top: 12px;
 }
 
 .sns-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  margin-right: 12px; /* ← 均等な間隔 */
 }
 
-.peraichi-icon {
-  width: 38px;
+.sns-icons a:last-child {
+  margin-right: 0;
+}
+
+.sns-icon {
+  width: 38px;   /* ← 表示サイズを統一 */
   height: 38px;
-  vertical-align: middle;
+  vertical-align: middle; /* ← 高さズレ防止 */
+  display: inline-block;
 }
 
 /* -----------------------------------
