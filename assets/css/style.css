@@ -46,7 +46,7 @@ body {
 .sub-accordion-content {
   display: none;
   padding: 0 0 12px 0;
-  overflow: visible; /* ← ★ SNSアイコンが切れないように追加 */
+  overflow: visible; /* ← SNSアイコンが切れない */
 }
 
 .accordion-item.active > .accordion-content {
@@ -175,16 +175,6 @@ body {
   font-weight: 500;
 }
 
-@media (max-width: 480px) {
-  .quantum-table {
-    font-size: 0.9rem;
-  }
-  .quantum-table th,
-  .quantum-table td {
-    padding: 8px 10px;
-  }
-}
-
 /* -----------------------------------
    ヘッダー画像
 ----------------------------------- */
@@ -210,12 +200,12 @@ body {
 }
 
 /* -----------------------------------
-   ★ SNSアイコン（修正版）
+   ★ SNSアイコン（完全修正版）
 ----------------------------------- */
 
 .sns-icons {
   width: 100%;
-  padding: 0 12px;
+  padding: 0 12px; /* ← 左右余白を追加（欠け防止） */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
