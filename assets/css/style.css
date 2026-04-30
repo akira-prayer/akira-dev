@@ -60,6 +60,12 @@ body {
    階層の左ライン（視覚的な階層表現）
 ----------------------------------- */
 
+.sub-accordion-content section {
+  margin-left: 12px;   /* ← ここでインデントを作る */
+  padding-left: 4px;   /* ← 必要なら少し余白 */
+  border-left: 2px solid #eee; /* ← 線を付けたいなら */
+}
+
 .sub-accordion-item {
   border-left: 3px solid #ddd;
   margin-left: 4px;   /* ← 12px → 4px に変更 */
