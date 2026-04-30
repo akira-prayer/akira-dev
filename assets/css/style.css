@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500&display=swap');
+
+body {
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+/* -----------------------------------
+   アコーディオン基本設定
+----------------------------------- */
+
+.accordion-header,
+.sub-accordion-header {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 0.95rem; /* ← Safari/Chrome 統一 */
+  cursor: pointer;
+  position: relative;
+  color: #000; /* Safari の青色を上書き */
+  font-weight: 500; /* 落ち着いた太さに統一 */
+}
+
+/* 三角アイコン（閉じている時） */
+.accordion-header::before,
+.sub-accordion-header::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+  font-size: 0.9rem;
+}
+
+/* 開いた時の三角アイコン */
+.accordion-item.active > .accordion-header::before,
+.sub-accordion-item.active > .sub-accordion-header::before {
+  transform: rotate(90deg);
+}
+
+/* -----------------------------------
+   コンテンツの開閉
+----------------------------------- */
+
+.accordion-content,
+.sub-accordion-content {
+  display: none;
+  padding: 0 0 12px 0;
+}
+
+.accordion-item.active > .accordion-content {
+  display: block;
+}
+
+.sub-accordion-item.active > .sub-accordion-content {
+  display: block;
+}
+
+/* -----------------------------------
+   階層の左ライン（視覚的な階層表現）
+----------------------------------- */
+
+.sub-accordion-item {
+  border-left: 3px solid #ddd;
+  margin-left: 12px;
+  padding-left: 12px;
+
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+/* 第3階層以降も自然に深く見える */
+.sub-accordion-item .sub-accordion-item {
+  border-left: 3px solid #ccc;
+  margin-left: 12px;
+  padding-left: 12px;
+}
+
+/* -----------------------------------
+   ページ全体の基本レイアウト
+----------------------------------- */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.7;
+  padding-bottom: 40px;
+}
+
+.container {
+  width: 92%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.site-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.lead {
+  margin-bottom: 24px;
+}
+
+/* アプリリンク */
+.app-links {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.app-icon {
+  width: 64px;
+  height: 64px;
+  margin-right: 12px;
+}
+
+/* スクショのグリッド */
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+/* 動画中央寄せ */
+.video-wrap {
+  text-align: center;
+}
+
+/* Instagram */
+.insta-icon {
+  color: #E1306C;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+/* 表中央寄せ */
+.table-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+/* quantum-table（既存） */
+.quantum-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.quantum-table th,
+.quantum-table td {
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+}
+
+.quantum-table th {
+  background: #f5f5f5;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .quantum-table {
+    font-size: 0.9rem;
+  }
+  .quantum-table th,
+  .quantum-table td {
+    padding: 8px 10px;
+  }
+}
+
+/* -----------------------------------
+   ヘッダー画像
+----------------------------------- */
+
+.header-image {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* -----------------------------------
+   フッター
+----------------------------------- */
+
+.site-footer {
+  text-align: center;
+  padding: 24px 0 32px;
+  color: #777;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+/* -----------------------------------
+   外部HTMLの見出しに番号を付けない
+----------------------------------- */
+
+.no-number::before {
+  content: "" !important;
+  counter-increment: none !important;
+}
+
+/* -----------------------------------
+   外部HTMLの段落を下げる
+----------------------------------- */
+
+.accordion-content p,
+.sub-accordion-content p {
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+/* -----------------------------------
+   外部HTMLの h3 を Safari/Chrome で統一
+----------------------------------- */
+
+.sub-accordion-content h3 {
+  font-size: 1rem; /* ← Safari の大きさを抑える */
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+/* -----------------------------------
+   ★ 通常 table の自然な罫線
+----------------------------------- */
+
+.sub-accordion-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.sub-accordion-content th,
+.sub-accordion-content td {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.sub-accordion-content th {
+  background: #f7f7f7;
+  font-weight: 500;
+}
