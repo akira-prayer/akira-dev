@@ -215,6 +215,7 @@ body {
 
 .sns-icons {
   width: 100%;
+  padding: 0 12px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
