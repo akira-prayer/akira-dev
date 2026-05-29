@@ -91,6 +91,29 @@ body {
   font-family: sans-serif;
   line-height: 1.7;
   padding-bottom: 40px;
+  color: #111827;
+}
+
+.accordion-content,
+.sub-accordion-content {
+  font-family: sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  background: #111827;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 12px;
 }
 
 .container {
@@ -192,11 +215,22 @@ body {
 ----------------------------------- */
 
 .site-footer {
+  width: 92%;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
   padding: 24px 0 32px;
   color: #777;
   font-size: 0.85rem;
   line-height: 1.2;
+}
+
+.site-footer p {
+  margin: 0 0 8px 0;
+}
+
+.site-footer > p:first-child {
+  text-align: left;
 }
 
 /* SNSアイコンの横並び（完全揃え） */
@@ -273,8 +307,13 @@ body {
 }
 
 /* -----------------------------------
-   目次（アンカーリンク）を非表示
+   目次（アンカーリンク）
 ----------------------------------- */
 .toc {
   display: none;
+}
+
+.site-footer a {
+  color: #111827;
+  text-decoration: underline;
 }
