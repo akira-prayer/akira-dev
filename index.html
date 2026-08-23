@@ -4,29 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="浄化浄霊で自分と周囲を改善していく方々を応援します。セルフ浄霊アプリや写経の無料マス目など、役立つヒントやツールを提供します。">
-  <meta property="og:title" content="遍く魂に光あれ｜自分でできる浄化・セルフ浄霊のヒントとツール">
-  <meta property="og:description" content="浄化浄霊で自分と周囲を改善していく方々を応援します。役立つヒントやツールを提供します。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://akira-prayer.github.io/akira-dev/">
-  <meta property="og:image" content="https://akira-prayer.github.io/akira-dev/images/230817_sunrise_ogp.png">
-  <meta property="og:site_name" content="遍く魂に光あれ">
-  <meta name="twitter:card" content="summary_large_image">
-  <title>自分でできる浄化・セルフ浄霊のヒントとツール｜遍く魂に光あれ</title>
+  <title>遍く魂に光あれ｜浄化・浄霊のヒントとWebアプリ</title>
   <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8LRPK054K"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-W8LRPK054K');
-  </script>
-  
-  <!-- CSS 読み込み -->
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    /* ヘッダー画像 */
+    body {
+      font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+      background-color: #f7f9f8;
+      color: #333;
+    }
     .header-image {
       width: 100%;
       height: 40vh;
@@ -34,68 +20,106 @@
       object-position: center;
       display: block;
     }
-    /* トップページ用簡易ナビゲーション */
-    .top-nav {
-      margin-top: 30px;
-    }
-    .top-nav-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
       padding: 20px;
-      margin-bottom: 20px;
-      background-color: #f9f9f9;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
     }
-    .top-nav-card h2 {
-      margin-top: 0;
+    h1.site-title {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+    }
+    /* 細身のメニューカード */
+    .menu-list {
+      max-width: 500px;
+      margin: 40px auto;
+    }
+    .menu-card {
+      display: block;
+      background-color: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px 25px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+      border-left: 5px solid #7f8c8d;
+    }
+    .menu-card:hover {
+      background-color: #f4f6f6;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .menu-card h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.2rem;
+      color: #2c3e50;
+    }
+    .menu-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.5;
+    }
+    .site-footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: #7f8c8d;
+      font-size: 0.9rem;
     }
   </style>
 </head>
-
 <body>
-  <!-- ヘッダー画像 -->
-  <img src="images/230817_sunrise.png" class="header-image" alt="header">
+  <header>
+    <img src="images/230817_sunrise.png" class="header-image" alt="朝焼けの空と浄化・浄霊を想起させるヘッダー画像">
+  </header>
 
-  <div class="container">
+  <main class="container">
     <h1 class="site-title">
       <ruby>遍く<rt>あまねく</rt></ruby>
       <ruby>魂<rt>たましい</rt></ruby>に
       <ruby>光<rt>ひかり</rt></ruby>あれ
     </h1>
 
-    <p class="lead">
-      形にとらわれず浄化・浄霊に取り組んで自分を変え、周りを変えていこうとする方々を応援します。<br>
+    <p class="lead" style="text-align: center; line-height: 1.8;">
+      形にとらわれず浄化浄霊に取り組んで自分を変え、周りを変えていこうとする方々を応援します。<br>
       能力ある方にお願いするのも良いですが、自ら日々実践していくと効果も大きいです。<br>
-      初めての方々、慣れない方々への助けになる無料ツール（アプリ・写経手本）やヒントを提供していきます。
+      初めての方々、慣れない方々への助けになるツールやヒントを提供していきます。
     </p>
 
-    <div class="top-nav">
-      <div class="top-nav-card">
-        <h2><a href="app.html">真言・お経暗唱のためのセルフ浄霊アプリ</a></h2>
-        <p>真言やお経を暗唱し、自身の声で霊力を高めるためのサポートアプリ（無料）を公開しています。Android/iPhone対応。</p>
-      </div>
+    <!-- 細身のメニューカード群 -->
+    <div class="menu-list">
+      <a href="eisho.html" class="menu-card">
+        <h2>真言・経文の詠唱</h2>
+        <p>暗唱や読経に集中するための「セルフ浄霊アプリ」などのツール。</p>
+      </a>
 
-      <div class="top-nav-card">
-        <h2><a href="shakyo.html">写経手本と無料マス目のダウンロード</a></h2>
-        <p>集中して根気強く写経を続けるためのお手本や、唱えながら書くための専用マス目（PDF）を提供しています。</p>
-      </div>
+      <a href="shakyo.html" class="menu-card">
+        <h2>写経・焚き上げ</h2>
+        <p>根気強く写経を続けるためのお手本や無料マス目のダウンロード。</p>
+      </a>
 
-      <div class="top-nav-card">
-        <h2><a href="teachings.html">浄化・浄霊への理解を深める（師の教え・所思）</a></h2>
-        <p>日々の浄化浄霊に関する深い理解を得るための、師の教えや私の考えをまとめています。</p>
-      </div>
-      
-      <div class="top-nav-card">
-        <h2><a href="profile.html">私（浄霊師 晄羅）について</a></h2>
-        <p>私のプロフィールや各種SNS（Instagram, YouTubeなど）へのリンクです。</p>
-      </div>
+      <a href="teachings.html" class="menu-card">
+        <h2>師の教え・所思</h2>
+        <p>日々の浄化浄霊に関する深い理解を得るための記録。</p>
+      </a>
+
+      <a href="profile.html" class="menu-card">
+        <h2>私について</h2>
+        <p>浄霊師 晄羅のプロフィールやSNSリンク。</p>
+      </a>
     </div>
-  </div>
+  </main>
 
   <footer class="site-footer">
-    <p>© 2026 晄羅 -Akira-<br>
-    本サイト内の文章・画像の無断転載を禁じます。</p>
+    <p>© 2026 晄羅 -Akira-<br>本サイト内の文章・画像の無断転載を禁じます。</p>
   </footer>
-
-  <script src="assets/js/script.js"></script>
 </body>
 </html>
