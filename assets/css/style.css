@@ -21,6 +21,15 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  text-align: left;
+  color: #2c3e50;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
 /* -----------------------------------
    ヘッダー画像
 ----------------------------------- */
@@ -30,6 +39,7 @@ body {
   object-fit: cover;
   object-position: center;
   display: block;
+  margin-bottom: 20px;
 }
 
 /* -----------------------------------
@@ -50,7 +60,7 @@ body {
   color: inherit;
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-  border-left: 5px solid #7f8c8d;
+  border-left: 5px solid #7f8c8d; /* すべてグレーに統一 */
 }
 .menu-card:hover {
   background-color: #f4f6f6;
@@ -70,23 +80,39 @@ body {
 }
 
 /* -----------------------------------
-   アコーディオン（detailsタグ）のスタイル
+   アコーディオン（detailsタグ）と静的カード
 ----------------------------------- */
 .content-wrapper {
   width: 100%;
   margin: 0;
 }
-.topic-details {
+.topic-details, .static-card {
   background-color: #fcfcfc;
   border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  margin-bottom: 6px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  border-left: 5px solid #7f8c8d; /* ここもグレーに統一 */
 }
+.static-card {
+  padding: 18px 20px;
+}
+.static-card h2 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+.static-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
 .topic-details summary {
-  padding: 12px 15px;
-  font-size: 1rem;
+  padding: 18px 20px;
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #333;
+  color: #2c3e50;
   cursor: pointer;
   list-style: none;
   position: relative;
@@ -99,8 +125,8 @@ body {
 .topic-details summary::after {
   content: '＋';
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 20px;
+  top: 18px; /* 位置を少し上に調整 */
   color: #888;
   font-weight: normal;
 }
@@ -111,23 +137,27 @@ body {
   border-bottom: 1px dashed #ccc;
 }
 .topic-content {
-  padding: 15px 20px;
+  padding: 20px;
   animation: fadeIn 0.2s ease;
+  font-size: 0.98rem; /* フォントサイズ統一 */
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-3px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* --- コンテンツ内の装飾（縦線を削除） --- */
 .topic-content section {
   margin-bottom: 20px;
 }
 .topic-content h3, .topic-content h4 {
   font-size: 1.05rem;
-  color: #444;
-  border-left: 3px solid #888;
-  padding-left: 10px;
-  margin-top: 15px;
+  color: #2c3e50;
+  margin-top: 20px;
   margin-bottom: 10px;
+  font-weight: bold;
+  /* border-left: 3px solid #888; を削除し縦線を無くしました */
+  /* padding-left: 10px; を削除 */
 }
 .topic-content p {
   line-height: 1.8;
@@ -161,9 +191,10 @@ body {
 ----------------------------------- */
 .intro-text {
   background-color: #f0f7f4;
-  padding: 12px 15px;
+  padding: 15px;
   border-radius: 6px;
   margin-bottom: 20px;
+  font-size: 0.95rem;
 }
 .close-btn {
   display: inline-block;
@@ -183,9 +214,18 @@ body {
   margin: 20px 0;
   text-align: left;
 }
+.nav-links.center {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
 .nav-links a {
   color: #3498db;
   text-decoration: none;
+}
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
 /* アプリ・スクショ・SNSなど */
