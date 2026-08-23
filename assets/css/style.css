@@ -126,7 +126,7 @@ h1 {
   content: '＋';
   position: absolute;
   right: 20px;
-  top: 18px; /* 位置を少し上に調整 */
+  top: 18px;
   color: #888;
   font-weight: normal;
 }
@@ -139,14 +139,14 @@ h1 {
 .topic-content {
   padding: 20px;
   animation: fadeIn 0.2s ease;
-  font-size: 0.98rem; /* フォントサイズ統一 */
+  font-size: 0.98rem;
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-3px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- コンテンツ内の装飾（縦線を削除） --- */
+/* --- コンテンツ内の装飾 --- */
 .topic-content section {
   margin-bottom: 20px;
 }
@@ -156,8 +156,6 @@ h1 {
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: bold;
-  /* border-left: 3px solid #888; を削除し縦線を無くしました */
-  /* padding-left: 10px; を削除 */
 }
 .topic-content p {
   line-height: 1.8;
@@ -228,11 +226,28 @@ h1 {
   text-decoration: underline;
 }
 
-/* アプリ・スクショ・SNSなど */
+/* アプリリンク */
 .app-links { display: flex; align-items: center; margin: 16px 0; }
 .app-icon { width: 64px; height: 64px; margin-right: 12px; }
-.screenshot-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
-.screenshot-grid img { width: 100px; height: auto; border: 1px solid #ddd; border-radius: 6px; }
+
+/* =========================================
+   スクショの2×2グリッド設定（今回修正した箇所）
+========================================= */
+.screenshot-grid { 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列の均等幅に設定 */
+  gap: 15px; /* 写真同士の隙間 */
+  max-width: 500px; /* PCで見た時に大きくなりすぎないように制限 */
+  margin: 0 auto 20px auto; /* 中央寄せ */
+}
+.screenshot-grid img { 
+  width: 100%; /* グリッドの枠に合わせて画像を拡大・縮小 */
+  height: auto; 
+  border: 1px solid #ddd; 
+  border-radius: 6px; 
+}
+
+/* 動画中央寄せ・SNSなど */
 .video-wrap { text-align: center; margin-bottom: 15px; }
 .sns-icons { margin-top: 12px; }
 .sns-icons a { display: inline-block; margin-right: 12px; }
