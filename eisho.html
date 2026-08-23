@@ -35,18 +35,17 @@
       color: #3498db;
       text-decoration: none;
     }
-    /* アコーディオン・カードの細身スタイル */
     .content-wrapper {
       max-width: 650px;
       margin: 0 auto;
     }
+    /* アコーディオン・カードの細身スタイル（色枠を削除） */
     .topic-details {
       background-color: #fff;
       border: 1px solid #e0e0e0;
       border-radius: 8px;
       margin-bottom: 15px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-      border-left: 5px solid #27ae60;
     }
     .topic-details summary {
       padding: 18px 20px;
@@ -57,14 +56,17 @@
       list-style: none;
       position: relative;
       outline: none;
+      line-height: 1.4;
     }
     .topic-details summary::-webkit-details-marker {
       display: none;
     }
+    /* 右端の開閉アイコン */
     .topic-details summary::after {
       content: '＋';
       position: absolute;
       right: 20px;
+      top: 25px;
       color: #888;
       font-weight: normal;
     }
@@ -83,7 +85,15 @@
       from { opacity: 0; transform: translateY(-3px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    /* 閉じるボタンのスタイル */
+    /* 見出し装飾（緑枠もグレー系に変更） */
+    .topic-content h4 {
+      color: #555;
+      font-size: 1.05rem;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      border-left: 3px solid #888;
+      padding-left: 10px;
+    }
     .close-btn {
       display: inline-block;
       background-color: #f1f1f1;
@@ -98,14 +108,13 @@
     .close-btn:hover {
       background-color: #e2e2e2;
     }
-    /* 単なるカード（アコーディオンではないもの） */
+    /* 単なるカード（アコーディオンではないもの。色枠を削除） */
     .static-card {
-      background-color: #f9f9f9;
+      background-color: #fcfcfc;
       border: 1px solid #e0e0e0;
       border-radius: 8px;
       padding: 18px 20px;
       margin-bottom: 15px;
-      border-left: 5px solid #bdc3c7;
     }
     .static-card h2 {
       margin: 0 0 5px 0;
@@ -131,18 +140,21 @@
 
       <!-- 1. セルフ浄霊アプリ (アコーディオン) -->
       <details class="topic-details">
-        <summary>「セルフ浄霊アプリ」真言経文を暗唱して読経に集中するために。</summary>
+        <summary>
+          セルフ浄霊アプリ<br>
+          <span style="font-size: 0.9rem; color: #666; font-weight: normal; display: inline-block; margin-top: 4px;">真言経文を暗唱して読経に集中するために。</span>
+        </summary>
         <div class="topic-content">
           <p>真言やお経を暗記しお唱えに集中するスマホアプリです。自身の声で唱えて霊力を高め、穢れを浄化していきましょう。</p>
           <p>振ると錫杖、タップでおりんやティンシャの音が鳴ります。経典をタップすると、経文の一部が隠れて記憶を促す暗唱モードになります。音は浄霊師ジャスミン様より提供頂きました。師のお唱え動画も参考にしましょう。</p>
 
-          <h4 style="margin-top:20px; border-left:3px solid #27ae60; padding-left:10px;">アプリへのリンク</h4>
+          <h4>アプリへのリンク</h4>
           <ul>
             <li><a href="https://akira-prayer.github.io/self-jyourei/index.html" target="_blank">Webアプリ（Android/iPhone対応）</a></li>
             <li><a href="https://github.com/akira-prayer/self-jyourei/releases/download/v2.0/self_jyourei_v2.0.apk">ネイティブアプリ（Android対応）</a></li>
           </ul>
 
-          <h4 style="margin-top:20px; border-left:3px solid #27ae60; padding-left:10px;">スクリーンショット</h4>
+          <h4>スクリーンショット</h4>
           <div class="screenshot-grid" style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:15px;">
             <img src="images/ss_shake.png" style="width:100px; height:auto; border:1px solid #ddd;">
             <img src="images/ss_dialog.png" style="width:100px; height:auto; border:1px solid #ddd;">
@@ -150,23 +162,22 @@
             <img src="images/ss_mantra.png" style="width:100px; height:auto; border:1px solid #ddd;">
           </div>
 
-          <h4 style="margin-top:20px; border-left:3px solid #27ae60; padding-left:10px;">操作動画</h4>
+          <h4>操作動画</h4>
           <div class="video-wrap" style="margin-bottom:15px;">
             <iframe width="315" height="560" src="https://www.youtube.com/embed/kTawZvkA6JE" frameborder="0" allowfullscreen></iframe>
           </div>
 
-          <h4 style="margin-top:20px; border-left:3px solid #27ae60; padding-left:10px;">インストール方法</h4>
+          <h4>インストール方法</h4>
           <p><strong>Android（Chrome）</strong><br>右上の「︙」をタップ ＞ ［ホーム画面に追加］ を選ぶ ＞ ［追加］</p>
           <p><strong>iPhone（Safari）</strong><br>下の共有ボタン（□↑） をタップ ＞ ［ホーム画面に追加］ ＞ ［追加］</p>
           <p><strong>Androidネイティブアプリ（Ver7以降）</strong><br>APKファイルをダウンロードしてタップ ＞ 「提供元不明のアプリのインストール」を「許可」</p>
 
-          <h4 style="margin-top:20px; border-left:3px solid #27ae60; padding-left:10px;">更新履歴</h4>
+          <h4>更新履歴</h4>
           <ul>
             <li>2026/02/01 : 十三仏真言に制限したWebAppをGitHubにてデプロイ。</li>
             <li>2026/03/14 : 3軸合成＋ゼロクロス検出仕様のAndroidApp.v2.0をGitHubReleasesにて公開。</li>
           </ul>
 
-          <!-- ★ 閉じるボタン（スッと戻る） ★ -->
           <div style="text-align: right; margin-top: 30px;">
             <button class="close-btn" onclick="const d = this.closest('details'); d.open = false; d.scrollIntoView({behavior: 'smooth'});">
               ▲ 閉じて見出しに戻る
@@ -178,13 +189,13 @@
 
       <!-- 2. デジタル数珠アプリ -->
       <div class="static-card">
-        <h2>「デジタル数珠アプリ」</h2>
+        <h2>デジタル数珠アプリ</h2>
         <p>※現在デバッグ中。近日公開予定。</p>
       </div>
 
       <!-- 3. 第3弾アプリ -->
       <div class="static-card">
-        <h2>「（第３弾アプリ）」</h2>
+        <h2>（第３弾アプリ）</h2>
         <p>※現在構想中。リクエストやアイデアをお寄せください。</p>
       </div>
 
