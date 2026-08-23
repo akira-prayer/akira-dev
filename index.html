@@ -27,16 +27,22 @@
       background-color: #fff;
       box-shadow: 0 0 15px rgba(0,0,0,0.05);
     }
+    /* タイトル左寄せ */
     h1.site-title {
-      text-align: center;
+      text-align: left;
       color: #2c3e50;
       margin-bottom: 30px;
       font-size: 1.8rem;
     }
-    /* 細身のメニューカード */
+    /* リード文左寄せ */
+    .lead {
+      text-align: left;
+      line-height: 1.8;
+    }
+    /* カード一覧（幅を広げて左寄せ） */
     .menu-list {
-      max-width: 500px;
-      margin: 40px auto;
+      width: 100%;
+      margin: 40px 0;
     }
     .menu-card {
       display: block;
@@ -49,6 +55,7 @@
       color: inherit;
       transition: all 0.3s ease;
       box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+      border-left: 5px solid #7f8c8d;
     }
     .menu-card:hover {
       background-color: #f4f6f6;
@@ -66,7 +73,9 @@
       color: #666;
       line-height: 1.5;
     }
+    /* フッターのみ中央寄せ */
     .site-footer {
+      text-align: center;
       margin-top: 40px;
       padding: 20px;
       color: #7f8c8d;
@@ -86,18 +95,17 @@
       <ruby>光<rt>ひかり</rt></ruby>あれ
     </h1>
 
-    <!-- センタリングを解除し、左寄せ（デフォルト）にしました -->
-    <p class="lead" style="line-height: 1.8;">
+    <p class="lead">
       形にとらわれず浄化浄霊に取り組んで自分を変え、周りを変えていこうとする方々を応援します。<br>
       能力ある方にお願いするのも良いですが、自ら日々実践していくと効果も大きいです。<br>
       初めての方々、慣れない方々への助けになるツールやヒントを提供していきます。
     </p>
 
-    <!-- 細身のメニューカード群 -->
+    <!-- 幅を広げたメニューカード群 -->
     <div class="menu-list">
       <a href="eisho.html" class="menu-card">
         <h2>真言・経文の詠唱</h2>
-        <p>暗唱や読経に集中するためのセルフ浄霊アプリなどのツール。</p>
+        <p>暗唱や読経に集中するための「セルフ浄霊アプリ」などのツール。</p>
       </a>
 
       <a href="shakyo.html" class="menu-card">
@@ -117,9 +125,8 @@
     </div>
   </main>
 
-  <!-- フッターを確実に中央寄せに設定 -->
   <footer class="site-footer">
-    <p style="text-align: center;">© 2026 晄羅 -Akira-<br>本サイト内の文章・画像の無断転載を禁じます。</p>
+    <p>© 2026 晄羅 -Akira-<br>本サイト内の文章・画像の無断転載を禁じます。</p>
   </footer>
 </body>
 </html>
