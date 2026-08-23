@@ -1,207 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500&display=swap');
 
-body {
-  font-family: 'Zen Maru Gothic', sans-serif;
-}
-
 /* -----------------------------------
-   アコーディオン基本設定
+   ベース設定
 ----------------------------------- */
-
-.accordion-header,
-.sub-accordion-header {
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  padding: 12px 0;
-  font-size: 0.95rem;
-  cursor: pointer;
-  position: relative;
-  color: #000;
-  font-weight: 500;
-}
-
-/* 三角アイコン（閉じている時） */
-.accordion-header::before,
-.sub-accordion-header::before {
-  content: "▶";
-  display: inline-block;
-  margin-right: 8px;
-  transition: transform 0.2s ease;
-  font-size: 0.9rem;
-}
-
-/* 開いた時の三角アイコン */
-.accordion-item.active > .accordion-header::before,
-.sub-accordion-item.active > .sub-accordion-header::before {
-  transform: rotate(90deg);
-}
-
-/* -----------------------------------
-   コンテンツの開閉
------------------------------------ */
-
-.accordion-content,
-.sub-accordion-content {
-  display: none;
-  padding: 0 0 12px 0;
-  overflow: visible; /* ← SNSアイコンが切れない */
-}
-
-.accordion-item.active > .accordion-content {
-  display: block;
-}
-
-.sub-accordion-item.active > .sub-accordion-content {
-  display: block;
-}
-
-/* -----------------------------------
-   階層の左ライン
------------------------------------ */
-
-.sub-accordion-content section {
-  margin-left: 4px;
-  padding-left: 8px;
-  border-left: 3px solid #ccc;
-}
-
-.sub-accordion-item {
-  border-left: 3px solid #ccc;
-  margin-left: 4px;
-  padding-left: 8px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
-}
-
-.sub-accordion-item .sub-accordion-item {
-  border-left: 3px solid #ccc;
-  margin-left: 4px;
-  padding-left: 8px;
-}
-
-/* -----------------------------------
-   ページ全体の基本レイアウト
------------------------------------ */
-
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Zen Maru Gothic', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
   line-height: 1.7;
   padding-bottom: 40px;
-  color: #111827;
-}
-
-.accordion-content,
-.sub-accordion-content {
-  font-family: sans-serif;
-  font-size: 0.98rem;
-  line-height: 1.8;
-}
-
-.skip-link {
-  position: absolute;
-  left: 16px;
-  top: -48px;
-  background: #111827;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 6px;
-  z-index: 1000;
-}
-
-.skip-link:focus {
-  top: 12px;
+  color: #333;
+  background-color: #f7f9f8;
 }
 
 .container {
-  width: 92%;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
-  padding-top: 20px;
-}
-
-.site-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.lead {
-  margin-bottom: 24px;
-}
-
-/* アプリリンク */
-.app-links {
-  display: flex;
-  align-items: center;
-  margin: 16px 0;
-}
-
-.app-icon {
-  width: 64px;
-  height: 64px;
-  margin-right: 12px;
-}
-
-/* スクショのグリッド */
-.screenshot-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.screenshot-grid img {
-  width: 100%;
-  margin-bottom: 12px;
-  border-radius: 6px;
-}
-
-/* 動画中央寄せ */
-.video-wrap {
-  text-align: center;
-}
-
-/* Instagram */
-.insta-icon {
-  color: #E1306C;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 12px;
-}
-
-/* 表中央寄せ */
-.table-wrap {
-  display: flex;
-  justify-content: center;
-  margin: 24px 0;
-}
-
-/* quantum-table */
-.quantum-table {
-  width: 100%;
-  max-width: 600px;
-  border-collapse: collapse;
-  font-size: 1rem;
-}
-
-.quantum-table th,
-.quantum-table td {
-  border: 1px solid #ccc;
-  padding: 10px 14px;
-}
-
-.quantum-table th {
-  background: #f5f5f5;
-  font-weight: 500;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  min-height: 100vh;
 }
 
 /* -----------------------------------
    ヘッダー画像
 ----------------------------------- */
-
 .header-image {
   width: 100%;
   height: 40vh;
@@ -211,114 +33,177 @@ body {
 }
 
 /* -----------------------------------
-   フッター
+   トップページ・目次ページのカード
 ----------------------------------- */
-
-.site-footer {
-  width: 92%;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 24px 0 32px;
-  color: #777;
-  font-size: 0.85rem;
-  line-height: 1.2;
+.menu-list {
+  width: 100%;
+  margin: 40px 0;
 }
-
-.site-footer p {
-  margin: 0 0 8px 0;
+.menu-card {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  border-left: 5px solid #7f8c8d;
 }
-
-.site-footer > p:first-child {
-  text-align: left;
+.menu-card:hover {
+  background-color: #f4f6f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
-
-/* SNSアイコンの横並び（完全揃え） */
-.sns-icons {
-  margin-left: 1em; /* ← テキストと左位置を揃える */
-  margin-top: 12px;
+.menu-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
 }
-
-.sns-icons a {
-  display: inline-block;
-  margin-right: 12px; /* ← 均等な間隔 */
-}
-
-.sns-icons a:last-child {
-  margin-right: 0;
-}
-
-.sns-icon {
-  width: 19px;   /* ← 表示サイズを統一 */
-  height: 19px;
-  vertical-align: middle; /* ← 高さズレ防止 */
-  display: inline-block;
+.menu-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
 }
 
 /* -----------------------------------
-   外部HTMLの見出しに番号を付けない
+   アコーディオン（detailsタグ）のスタイル
 ----------------------------------- */
-
-.no-number::before {
-  content: "" !important;
-  counter-increment: none !important;
+.content-wrapper {
+  width: 100%;
+  margin: 0;
 }
-
-/* -----------------------------------
-   外部HTMLの段落を下げる
------------------------------------ */
-
-.accordion-content p,
-.sub-accordion-content p {
-  margin-left: 1em;
-  margin-bottom: 1em;
+.topic-details {
+  background-color: #fcfcfc;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 6px;
 }
-
-/* -----------------------------------
-   外部HTMLの h3
------------------------------------ */
-
-.sub-accordion-content h3 {
+.topic-details summary {
+  padding: 12px 15px;
   font-size: 1rem;
-  margin: 12px 0 6px;
-  font-weight: 600;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  outline: none;
+  line-height: 1.4;
 }
-
-/* -----------------------------------
-   通常 table の自然な罫線
------------------------------------ */
-
-.sub-accordion-content table {
+.topic-details summary::-webkit-details-marker {
+  display: none;
+}
+.topic-details summary::after {
+  content: '＋';
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #888;
+  font-weight: normal;
+}
+.topic-details[open] summary::after {
+  content: '－';
+}
+.topic-details[open] summary {
+  border-bottom: 1px dashed #ccc;
+}
+.topic-content {
+  padding: 15px 20px;
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.topic-content section {
+  margin-bottom: 20px;
+}
+.topic-content h3, .topic-content h4 {
+  font-size: 1.05rem;
+  color: #444;
+  border-left: 3px solid #888;
+  padding-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.topic-content p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+.topic-content ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+.topic-content li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.topic-content table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 12px;
+  margin: 15px 0;
 }
-
-.sub-accordion-content th,
-.sub-accordion-content td {
-  border: 1px solid #ccc;
-  padding: 8px 10px;
+.topic-content th, .topic-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
   text-align: left;
 }
-
-.sub-accordion-content th {
-  background: #f7f7f7;
+.topic-content th {
+  background-color: #f2f2f2;
   font-weight: 500;
 }
 
 /* -----------------------------------
-   目次（アンカーリンク）
+   汎用装飾パーツ
 ----------------------------------- */
-.toc {
-  display: none;
+.intro-text {
+  background-color: #f0f7f4;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
 }
-
-.site-footer a,
-.site-footer a:visited,
-.site-footer a:hover,
-.site-footer a:focus-visible {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
+.close-btn {
+  display: inline-block;
+  background-color: #f1f1f1;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.close-btn:hover {
+  background-color: #e2e2e2;
+}
+.nav-links {
+  margin: 20px 0;
+  text-align: left;
+}
+.nav-links a {
+  color: #3498db;
   text-decoration: none;
 }
+
+/* アプリ・スクショ・SNSなど */
+.app-links { display: flex; align-items: center; margin: 16px 0; }
+.app-icon { width: 64px; height: 64px; margin-right: 12px; }
+.screenshot-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+.screenshot-grid img { width: 100px; height: auto; border: 1px solid #ddd; border-radius: 6px; }
+.video-wrap { text-align: center; margin-bottom: 15px; }
+.sns-icons { margin-top: 12px; }
+.sns-icons a { display: inline-block; margin-right: 12px; }
+.sns-icon { width: 19px; height: 19px; vertical-align: middle; display: inline-block; }
+
+/* フッター */
+.site-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+.site-footer a { color: inherit; text-decoration: none; }
