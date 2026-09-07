@@ -3,10 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="浄化浄霊で自分と周囲を改善していく方々を応援します。セルフ浄霊アプリや写経の無料マス目など、役立つヒントやツールを提供します。">
+  <meta name="description" content="浄化・浄霊の実践を支えるWebアプリ、写経・読経のヒント、師の教えを紹介するサイトです。初心者から継続者まで役立つ情報をまとめています。">
   <title>遍く魂に光あれ｜浄化・浄霊のヒントとWebアプリ</title>
-  <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
-  <link rel="stylesheet" href="assets/css/style.css?v=202608">
+
+  <!-- 1. アイコンを「絶対パス」に修正 -->
+  <link rel="icon" type="image/png" sizes="512x512" href="https://akira-prayer.github.io/akira/images/icon-512.png">
+
+  <!-- 2. サイト名を正しく表示させるための構造化データ（JSON-LD）とOGP -->
+  <meta property="og:site_name" content="遍く魂に光あれ">
+  <meta property="og:title" content="遍く魂に光あれ｜浄化・浄霊のヒントとWebアプリ">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akira-prayer.github.io/akira/">
+  <meta property="og:image" content="https://akira-prayer.github.io/akira/images/230817_sunrise_ogp.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "遍く魂に光あれ",
+    "url": "https://akira-prayer.github.io/akira/"
+  }
+  </script>
+
+  <!-- 3. Google Analytics タグの復活 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8LRPK054K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W8LRPK054K');
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css?v=1">
 </head>
 <body>
   <header>
@@ -29,7 +57,7 @@
     <div class="menu-list">
       <a href="eisho.html" class="menu-card">
         <h2>真言・経文の詠唱</h2>
-        <p>詠唱に集中し継続していくためのアプリ・ツール。</p>
+        <p>詠唱に集中し続けていくためのスマホアプリなどのツール。</p>
       </a>
 
       <a href="shakyo.html" class="menu-card">
