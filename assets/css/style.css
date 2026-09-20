@@ -111,7 +111,7 @@ h1 {
 }
 
 .topic-details summary {
-  padding: 18px 20px;
+  padding: 18px 120px 18px 20px; /* 右側にアイコンと「＋」が入る分の余白を確保 */
   font-size: 1.1rem;
   font-weight: bold;
   color: #2c3e50;
@@ -124,13 +124,16 @@ h1 {
 .topic-details summary::-webkit-details-marker {
   display: none;
 }
+/* 「＋」マークの位置（上下中央） */
 .topic-details summary::after {
   content: '＋';
   position: absolute;
   right: 20px;
-  top: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   color: #888;
   font-weight: normal;
+  font-size: 1.2rem;
 }
 .topic-details[open] summary::after {
   content: '－';
@@ -138,6 +141,19 @@ h1 {
 .topic-details[open] summary {
   border-bottom: 1px dashed #ccc;
 }
+
+/* サマリ（見出し）の右側に配置するアイコンのスタイル */
+.summary-icon {
+  position: absolute;
+  right: 60px; /* 「＋」マークの左側に並ぶように調整 */
+  top: 50%;
+  transform: translateY(-50%); /* 上下中央揃え */
+  width: 48px;  /* アイコンの大きさ */
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px; /* カードに馴染む角丸 */
+}
+
 .topic-content {
   padding: 20px;
   animation: fadeIn 0.2s ease;
