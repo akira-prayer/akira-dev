@@ -86,10 +86,71 @@
       </details>
 
       <!-- 2. デジタル数珠アプリ -->
-      <div class="static-card">
-        <h2>デジタル数珠アプリ（仮称）</h2>
-        <p>※現在デバッグ中。目標年内公開。</p>
-      </div>
+      <details class="topic-details">
+        <summary>
+          デジタル数珠アプリ<br>
+          <span style="font-size: 0.9rem; color: #666; font-weight: normal; display: inline-block; margin-top: 4px;">真言やお経を暗唱しお唱えに集中するためのアプリツール。</span>
+        </summary>
+        <div class="topic-content">
+          <p>真言を詠唱する際に唱えた回数をカウントして音と振動でナビゲートしてくれるアプリです。連続で沢山唱えて瞑想する際にも使えます。
+</p>
+          <p>ご存じの方も多いと思いますが、仏教徒アイテムである数珠（念珠）は、唱えながら指で珠を送って数えるためのツールです。でも慣れないと集中力を取られてしまうのと、瞑想状態に浸ると出来にくいのが難点です。南アジアの国々では、万歩計の様なツールや、タップでカウントしてくれるアプリも出回っていますが、ハンズフリーに拘り「声」を拾ってカウントしてくれるスマホアプリを開発しました。
+
+インストール後に、自分の詠唱を記憶させる※のと、判定閾値を調整する必要がありますが、その手軽さを体験し、日々のお唱えに利用ください。
+※巷にはAlexaやSiriなど音声認識してくれるツールが溢れていますが、英語や日本語などの音声モデルはあってもサンスクリット語のモデルは無いので、個々で登録が必要です。
+
+おまけ機能として特別なアルゴリズムを実装し、声紋に霊力が検出されたら、背景画が七色に変化します。また環境に制約があって大声で詠唱出来ない場合は、画面のタップでもカウントが進み、回数をバイブで知る事が可能です。
+</p>
+
+          <h4>アプリへのリンク</h4>
+          <ul>
+            <li><a href="https://github.com/akira-prayer/self-jyourei/releases/download/v2.0/self_jyourei_v2.0.apk">ネイティブアプリ（Android対応）</a></li>
+          </ul>
+
+          <h4>スクリーンショット</h4>
+          <div class="screenshot-grid">
+            <img src="images/ss_db_setting.png" alt="環境設定画面">
+            <img src="images/ss_db_record.png" alt="声紋登録画面">
+            <img src="images/ss_db_select.png" alt="真言選択画面">
+            <img src="images/ss_db_chant.png" alt="詠唱・瞑想画面">
+          </div>
+
+          <h4>操作動画</h4>
+          <div class="video-wrap">
+            <iframe width="315" height="560" src="https://www.youtube.com/embed/kTawZvkA6JE" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <h4>インストール方法</h4>
+          
+          <p style="margin-top: 20px;"><strong>【Androidネイティブアプリの場合】</strong></p>
+          <p style="font-size: 0.9rem; background-color: #fff3f3; border-left: 4px solid #e74c3c; padding: 10px; margin-bottom: 15px;">
+            ※Google Playストアを通さないため、スマホの防犯機能でいくつか「警告」が出ますが、以下の手順で安全にインストールできます。
+          </p>
+          <ol style="margin-bottom: 15px; padding-left: 25px; line-height: 1.8;">
+            <li>上の「ネイティブアプリ」のリンクをタップします。</li>
+            <li>「この種類のファイルはお使いのデバイスに悪影響を与える…」などの警告が出ても、<strong>「OK」や「ダウンロードを続行」</strong>を選んでください。</li>
+            <li>ダウンロードが完了したら、そのファイル（self_jyourei_v...apk）をタップして開きます。</li>
+            <li>「セキュリティ上の理由から…不明なアプリをインストールすることはできません」と出た場合は、<strong>「設定」</strong>をタップします。</li>
+            <li><strong>「この提供元のアプリを許可」</strong>のスイッチをオン（色が付く状態）にします。</li>
+            <li>スマホの「戻る」ボタンで一つ前の画面に戻り、<strong>「インストール」</strong>をタップすれば完了です。</li>
+          </ol>
+          <p style="font-size: 0.9rem; color: #666;">
+            ※無事にインストールできた後は、安全のため手順5の「アプリを許可」のスイッチをオフに戻しておくことをお薦めします。
+          </p>
+
+          <h4>更新履歴</h4>
+          <ul>
+            <li>2026/09/30 : v1.0 をGitHubReleasesにて公開。</li>
+            <li>（お願い）諸事情で私個人でのデバッグと検証しか出来ていません。どうか性能や使い勝手の感想をお寄せいただき改善にご協力ください。また本アプリは、音声認識に演算処理が必要でandroid用ネイティブアプリでの提供です。タップカウント機能だけであればWebアプリ形式の提供も可能ですのでリクエストをお寄せください。</li>
+          </ul>
+
+          <div style="text-align: right; margin-top: 30px;">
+            <button class="close-btn" onclick="const d = this.closest('details'); d.open = false; d.scrollIntoView({behavior: 'smooth'});">
+              ▲ 閉じて見出しに戻る
+            </button>
+          </div>
+        </div>
+      </details>
 
       <!-- 3. 第3弾アプリ -->
       <div class="static-card">
