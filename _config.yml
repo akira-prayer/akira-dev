@@ -2,5 +2,8 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
 
+url: "https://akira-prayer.github.io"
+baseurl: "/akira"
+
 plugins:
   - jekyll-sitemap
