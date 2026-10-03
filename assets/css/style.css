@@ -250,7 +250,7 @@ h1 {
 .app-links { display: flex; align-items: center; margin: 16px 0; }
 .app-icon { width: 64px; height: 64px; margin-right: 12px; }
 
-/* スクリーンショットの並び・崩れ防止設定 */
+/* スクリーンショットの並び・崩れ防止設定（強制統一） */
 .screenshot-grid { 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -259,24 +259,24 @@ h1 {
   margin: 0 auto 20px auto;
 }
 .screenshot-grid img { 
-  width: 100%;
-  height: auto; 
-  aspect-ratio: 9 / 16; /* 縦長スクショの比率を完全に統一 */
-  object-fit: cover;    /* 枠に合わせて綺麗に収める */
+  width: 100% !important;
+  height: auto !important; 
+  aspect-ratio: 9 / 16 !important; /* 縦長スクショの比率を完全に統一 */
+  object-fit: cover !important;    
   border: 1px solid #ddd; 
   border-radius: 8px; 
   display: block;
 }
 
-/* YouTube縦長動画の表示・崩れ防止設定 */
+/* YouTube縦長動画のサイズ・大きさを完全統一 */
 .video-wrap { 
   max-width: 315px; 
   margin: 0 auto 20px auto; 
 }
 .video-wrap iframe {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 9 / 16; /* YouTubeショート等の縦長比率に合わせる */
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 9 / 16 !important; /* HTML側のサイズ指定を無視して縦長比率で強制統一 */
   border: none;
   border-radius: 8px;
   display: block;
