@@ -250,7 +250,7 @@ h1 {
 .app-links { display: flex; align-items: center; margin: 16px 0; }
 .app-icon { width: 64px; height: 64px; margin-right: 12px; }
 
-/* スクリーンショット：上下のOSバーだけをCSSで綺麗に切り落として隠す設定 */
+/* スクリーンショット：上下のOSバーだけを丁度良く隠す設定（上3%、下4%に調整） */
 .screenshot-grid { 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -263,7 +263,7 @@ h1 {
   height: auto !important; 
   aspect-ratio: 9 / 16 !important; 
   object-fit: cover !important; 
-  clip-path: inset(6% 0 6% 0) !important; /* 上から6%、下から6%を切り落としてOSバーを隠す */
+  clip-path: inset(3% 0 4% 0) !important; /* 上から3%、下から4%だけをカットしてOSバーを隠す */
   border: none !important;
   border-radius: 8px; 
   display: block;
