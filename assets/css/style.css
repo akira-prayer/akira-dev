@@ -249,20 +249,38 @@ h1 {
 ----------------------------------- */
 .app-links { display: flex; align-items: center; margin: 16px 0; }
 .app-icon { width: 64px; height: 64px; margin-right: 12px; }
+
+/* スクリーンショットの並び・崩れ防止設定 */
 .screenshot-grid { 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto 20px auto;
 }
 .screenshot-grid img { 
   width: 100%;
   height: auto; 
+  aspect-ratio: 9 / 16; /* 縦長スクショの比率を完全に統一 */
+  object-fit: cover;    /* 枠に合わせて綺麗に収める */
   border: 1px solid #ddd; 
-  border-radius: 6px; 
+  border-radius: 8px; 
+  display: block;
 }
-.video-wrap { text-align: center; margin-bottom: 15px; }
+
+/* YouTube縦長動画の表示・崩れ防止設定 */
+.video-wrap { 
+  max-width: 315px; 
+  margin: 0 auto 20px auto; 
+}
+.video-wrap iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16; /* YouTubeショート等の縦長比率に合わせる */
+  border: none;
+  border-radius: 8px;
+  display: block;
+}
 
 /* プロフィールページのSNSアイコンを約1.5倍に拡大 */
 .sns-icons { margin-top: 20px; }
