@@ -250,7 +250,7 @@ h1 {
 .app-links { display: flex; align-items: center; margin: 16px 0; }
 .app-icon { width: 64px; height: 64px; margin-right: 12px; }
 
-/* スクリーンショット：上1%、下2%で優しくOSバーを隠す設定 */
+/* スクリーンショット：上0%、下1%のみカットする設定に変更 */
 .screenshot-grid { 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -263,7 +263,7 @@ h1 {
   height: auto !important; 
   aspect-ratio: 9 / 16 !important; 
   object-fit: cover !important; 
-  clip-path: inset(1% 0 2% 0) !important; /* 上から1%、下から2%だけをカット */
+  clip-path: inset(0% 0 1% 0) !important; /* 上は切らず、下から1%だけをカット */
   border: none !important;
   border-radius: 8px; 
   display: block;
