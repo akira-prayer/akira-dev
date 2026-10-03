@@ -250,7 +250,7 @@ h1 {
 .app-links { display: flex; align-items: center; margin: 16px 0; }
 .app-icon { width: 64px; height: 64px; margin-right: 12px; }
 
-/* スクリーンショット：上下が欠けず全体が収まる設定に変更 */
+/* スクリーンショット：縁取り線を消し、余白を黒にして全体を表示 */
 .screenshot-grid { 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -262,9 +262,9 @@ h1 {
   width: 100% !important;
   height: auto !important; 
   aspect-ratio: 9 / 16 !important; 
-  object-fit: contain !important; /* 画像が欠けずに全体が収まるようにする */
-  background-color: #f9f9f9;     /* 余白ができる場合の背景色 */
-  border: 1px solid #ddd; 
+  object-fit: contain !important; 
+  background-color: #000 !important; /* 余白をアプリに合わせた黒色に */
+  border: none !important;           /* 縁取り線を完全に消す */
   border-radius: 8px; 
   display: block;
 }
