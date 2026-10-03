@@ -250,7 +250,7 @@ h1 {
 .app-links { display: flex; align-items: center; margin: 16px 0; }
 .app-icon { width: 64px; height: 64px; margin-right: 12px; }
 
-/* スクリーンショットの並び・崩れ防止設定（強制統一） */
+/* スクリーンショット：上下が欠けず全体が収まる設定に変更 */
 .screenshot-grid { 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -261,8 +261,9 @@ h1 {
 .screenshot-grid img { 
   width: 100% !important;
   height: auto !important; 
-  aspect-ratio: 9 / 16 !important; /* 縦長スクショの比率を完全に統一 */
-  object-fit: cover !important;    
+  aspect-ratio: 9 / 16 !important; 
+  object-fit: contain !important; /* 画像が欠けずに全体が収まるようにする */
+  background-color: #f9f9f9;     /* 余白ができる場合の背景色 */
   border: 1px solid #ddd; 
   border-radius: 8px; 
   display: block;
@@ -276,7 +277,7 @@ h1 {
 .video-wrap iframe {
   width: 100% !important;
   height: auto !important;
-  aspect-ratio: 9 / 16 !important; /* HTML側のサイズ指定を無視して縦長比率で強制統一 */
+  aspect-ratio: 9 / 16 !important; 
   border: none;
   border-radius: 8px;
   display: block;
